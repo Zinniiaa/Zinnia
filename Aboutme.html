@@ -11,7 +11,7 @@
       font-family: Arial, sans-serif;
       color: white;
       text-align: center;
-      background-image: url('https://cdn.discordapp.com/attachments/330813181100556290/1231542474376478790/LEMAT_WORKS.gif?ex=6637564e&is=6624e14e&hm=9b68b1aa18ba50ed30984289024ab36cfaa726aec6e7b1ede2dfb80b27c73c59&');
+      background-image: url('gifs/stars-train.gif');
       background-size: cover;
       background-position: center;
     }
@@ -24,7 +24,7 @@
 
     h1 {
       font-size: 5em;
-      margin-bottom: 20px;
+      margin-bottom: 50px;
     }
 
     p {
@@ -41,14 +41,21 @@
 
     img {
       max-width: 100%; /* Ensures the image does not exceed the container width */
-      width: 1000px; /* Set width to 200px */
+      width: 100px; /* Set width to 200px */
       height: auto; /* Maintain aspect ratio */
     }
+
+    .video-container {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 50px;
+    }
+    
     
     video {
       display: block;
       margin: 20px auto;
-      max-width: 100%;
+      max-width: 30%;
     }
 
   </style>
@@ -61,15 +68,25 @@
   <p class="small">
     I'm just a silly little gamer, I play a lot of Final Fantasy XIV
 </p>
-<video controls autoplay>
-  <source src="videos/meow.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+
+
+<div class="video-container">
+  <video controls autoplay>
+    <source src="videos/flowers.mp4" type="video/mp4">
+  </video>
+
+  <video controls autoplay>
+    <source src="videos/meow.mp4" type="video/mp4">
+  </video>
   
+  <video controls autoplay>
+    <source src="videos/hearts.mp4" type="video/mp4">
+  </video>
+  </div>
 </div>
 
 
-  
+
 
 </body>
 </html>
