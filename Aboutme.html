@@ -51,41 +51,83 @@
       margin-top: 50px;
     }
     
+    .video-wrapper {
+      position: relative;
+      max-width: 30%;
+    }
     
     video {
       display: block;
       margin: 20px auto;
-      max-width: 30%;
+      width: 100%;
+      height: auto;
     }
+    
+    .play-button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 60px;
+      height: 60px;
+      background: url('play-button.png') no-repeat;
+      background-size: contain;
+      cursor: pointer;
+    }
+
+    .back-button {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      font-size: 1.5em;
+      color: white;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
 
   </style>
 </head>
 <body>
 
 <div class="container">
+  <a href="#" class="back-button" onclick="goBack()">&lt; Back</a>
   <h1>Hi, I'm Zinnia!</h1>
   <p>or you may know me by Exiles</p>
   <p class="small">
     I'm just a silly little gamer, I play a lot of Final Fantasy XIV
 </p>
 
-
 <div class="video-container">
-  <video controls autoplay>
-    <source src="videos/flowers.mp4" type="video/mp4">
-  </video>
+  <div class="video-wrapper">
+    <video controls autoplay>
+      <source src="videos/flowers.mp4" type="video/mp4">
+    </video>
+    <div class="play-button"></div>
+  </div>
 
-  <video controls autoplay>
-    <source src="videos/meow.mp4" type="video/mp4">
-  </video>
+  <div class="video-wrapper">
+    <video controls autoplay>
+      <source src="videos/meow.mp4" type="video/mp4">
+    </video>
+    <div class="play-button"></div>
+  </div>
   
-  <video controls autoplay>
-    <source src="videos/hearts.mp4" type="video/mp4">
-  </video>
+  <div class="video-wrapper">
+    <video controls autoplay>
+      <source src="videos/hearts.mp4" type="video/mp4">
+    </video>
+    <div class="play-button"></div>
   </div>
 </div>
 
+</div>
 
+<script>
+  function goBack() {
+    window.history.back();
+  }
+</script>
 
 
 </body>

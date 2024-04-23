@@ -36,11 +36,23 @@
       width: 1000px; /* Set width to 200px */
       height: auto; /* Maintain aspect ratio */
     }
+
+    .back-button {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      font-size: 1.5em;
+      color: white;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
   </style>
 </head>
 <body>
 
 <div class="container">
+  <a href="#" class="back-button" onclick="goBack()">&lt; Back</a>
   <h1>Games I play</h1>
   <p>Final Fantasy XIV</p>
   <img src="images/ffxiv.png" alt="Image 2">
@@ -57,7 +69,13 @@
     <p>Tekken 8</p>
     <img src="images/tekken.png" alt="Image 2">
 </div>
-  
+
+<script>
+  function goBack() {
+    window.history.back();
+  }
+</script>
+
 
 </body>
 </html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enter Password</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-image: url('gifs/stars-train.gif');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2em;
+      margin-bottom: 20px;
+      color: white;
+    }
+
+    p {
+      font-size: 1.2em;
+      color: white;
+    }
+
+
+    .input-box {
+      display: inline-block;
+      border: 2px solid white;
+      border-radius: 5px;
+      padding: 5px;
+    }
+
+    input[type="text"] {
+      padding: 10px;
+      font-size: 2em;
+      border: none;
+      background: transparent;
+      color: white;
+      text-align: center;
+      width: 140px;
+      outline: none;
+    }
+
+    input[type="text"]::placeholder {
+      color: white;
+      opacity: 0.5;
+    }
+
+    input[type="submit"] {
+      padding: 10px 20px;
+      font-size: 1em;
+      border: none;
+      background-color: #007bff;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      display: none;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .popup {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      position: relative;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Find The Hidden Letter and Numbers</h1>
+  <p>they're in my <a href="Social.html">Socials</a>, there's 4 you can find across all</p>
+
+  <form id="passwordForm" action="check_password.php" method="post">
+    <div class="input-box">
+      <input type="text" id="passwordInput" name="password" minlength="4" maxlength="4" title="t309" required>
+    </div>
+    <br><br>
+    <input type="submit" value="Submit">
+  </form>
+</div>
+
+<div class="overlay" id="overlay">
+  <div class="popup">
+    <span class="close-btn" onclick="closePopup()">X</span>
+    <h2>exiles</h2>
+    <p>:3 Made you work for it</p>
+  </div>
+</div>
+
+<script>
+  function closePopup() {
+    document.getElementById('overlay').style.display = 'none';
+  }
+
+  document.getElementById('passwordForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    var password = document.getElementById('passwordInput').value.toLowerCase();
+    if (password === 't309') {
+      document.getElementById('overlay').style.display = 'flex';
+    } else {
+      alert('Sorry, wrong password. Try again.');
+    }
+  });
+</script>
+
+</body>
+</html>

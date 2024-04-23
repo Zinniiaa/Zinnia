@@ -95,12 +95,31 @@
       object-fit: contain; /* Make the image cover the entire block */
     }
 
+    .back-button {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      font-size: 1.5em;
+      color: white;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+        .block-digit {
+      font-size: 50px;
+      position: fixed;
+      top: 20px;
+      right: 20px;
+    }
+
   </style>
 </head>
 <body>
 
 <div class="container">
+  <a href="#" class="back-button" onclick="goBack()">&lt; Back</a>
   <h1>Socials</h1>
+  <div class="block-digit">9</div>
   <div class="blocks">
     <a href="https://www.twitch.tv/zinniat" class="block" title="Twitch" target="_blank">
         <img src="images/twitch.png" alt="Page 1">
@@ -113,10 +132,17 @@
       <a href="https://open.spotify.com/user/nxaaro22ipuc0mwxu9yf0pdkl?si=e259cbd3b4524eb9" class="block" title="Spotify" target="_blank">
         <img src="images/spotify.png" alt="Page 3">
       </a>
-      <a href="page4.html" class="block" title="Page 4">
-        <img src="images/image4.jpg" alt="Page 4">
+      <a href="puzzle.html" class="block" title="Discord">
+        <img src="images/discord.png" alt="Page 4">
       </a>
     </div>
+
+<script>
+  function goBack() {
+    window.history.back();
+  }
+</script>
+    
   
 </body>
 </html>
